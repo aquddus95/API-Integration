@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<title>Search</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color:white;
+}
+
+/* Style the header */
+.header {
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+}
+
+
+
+.column {
+    float: left;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Left and right column */
+.column.side {
+    width: 25%;
+}
+
+/* Middle column */
+.column.middle {
+    width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Style the footer */
+.footer {
+    padding: 10px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .column.side, .column.middle {
+        width: 100%;
+    }
+}
+
+
+
+
+</style>
+
+
+<body background="https://i.pinimg.com/originals/dc/34/fb/dc34fb7888202c8b7f4a1be202bfd380.jpg">
+
+
+<div class="header">
+  <h2><b>Search for Amazing Combos</b></h2>
+</div>
+
+<div class="row">
+  <div class="column side"><img class="w3-circle" src="{% static "finalproject/Yelp.jpg" %}" width="300" height="300"></div>
+  <div class="column middle" >
+  	    <form id="restaurants_search" action="{% url 'restaurants_results' %}" method="get" accept-charset="utf-8">
+      <button class="some_button" type="submit">Search
+        <i class="non_important_tag"></i>
+      </button>
+      <input class="input_box" id="restaurants_search" name="query" type="text" placeholder="restaurant">
+    </form>
+  </div>
+  <div class="column side"><img class="w3-circle" src="{% static "finalproject/zomato.jpg" %}" width="300" height="300"></div>
+</div>
+
+<div class="footer">
+  <h3><b>Please Enter in the Name of the Restaurant to get Information Regarding the Business and Recipe Recommendations</b></h3>
+</div>
+
+</body>
+
+
+</html>

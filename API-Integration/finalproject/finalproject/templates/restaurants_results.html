@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body {font-family: "Times New Roman", Georgia, Serif;}
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Playfair Display";
+}
+</style>
+<body>
+
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1100px">
+
+ 
+
+  
+
+  
+  <!-- Menu Section -->
+  <div class="w3-row w3-padding-64" >
+    <div class="w3-col l6 w3-padding-large">
+		{% if search_results %}
+
+		{% for restaurant in search_results %}
+		<h5>{{restaurant}}</h5>
+		<br>
+		{% endfor %}
+
+		{% else %}
+		<p>No Restaurant Founds, Try Again!</p>
+		{% endif %} 
+    </div>
+    
+  </div>
+
+  <hr>
+
+
+</body>
+</html>

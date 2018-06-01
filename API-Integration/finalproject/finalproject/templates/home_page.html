@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<title>Welcome</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body {font-family: "Times New Roman", Georgia, Serif;}
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Playfair Display";
+    letter-spacing: 2px;
+}
+</style>
+<body>
+
+
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+    <a href="#home" class="w3-bar-item w3-button">Welcome to FoodSpec! </a>
+
+    <div class="w3-right w3-hide-small">
+      <a href="{% url 'create_account' %}" class="w3-bar-item w3-button">Signup</a>
+      <a href="{% url 'login' %}" class="w3-bar-item w3-button">Login</a>
+      <a href="{% url 'find_restaurants' %}" class="w3-bar-item w3-button">Find Restaurant and Recipe Combos</a>
+      <a href="http://127.0.0.1:8000/database/recipes_results?query=user" class="w3-bar-item w3-button">Recommendations</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+  <img class="w3-image w3-image" src="static/finalproject/homepage_image.jpg" width="1600" height="800">
+  <div class="w3-display-bottomleft w3-padding-large">
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1100px">
+  <!-- About Section -->
+  <div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+     <img src="static/finalproject/about_image.jpg" class="w3-round w3-image" alt="Table Setting" width="600" height="750">
+    </div>
+
+    <div class="w3-col m6 w3-padding-large">
+      <h1 class="w3-center">Find the Perfect Restaurant and Recipe Combo</h1><br>
+   
+      <p class="w3-large"> FoodSpec is an amazing application that not only gives you detailed information regarding a restaraunt that you may search but also provides recommended recipes based of the restaurant's cusine type. What makes FoodSpec unique is that it scours the likes of Yelp and Zomato to provide you with not only more reviews but also information that one of these sources may include while the other does not. The objective of this application is for the user to not only be able to look up restaurants and get recipe recommendations but to be able to get recipe and restaraunt recommendations based of the user's search history on the website</p>
+    </div>
+  </div>
+  
+  <hr>
+  
+  <hr>
+
+
+</body>
+</html>
+

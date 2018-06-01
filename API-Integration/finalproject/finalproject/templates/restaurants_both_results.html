@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<title>{{name}}</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body {font-family: "Times New Roman", Georgia, Serif;}
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Playfair Display";
+    letter-spacing: 5px;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+</style>
+<body>
+
+
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+ <h1 class="w3-xxlarge" align="center">{{name}}</h1>
+  <img class="center" src={{image}} alt= "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/300px-No_image_available.svg.png">
+</header>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1100px">
+
+  <!-- About Section -->
+  <div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+     <img src="{% static "finalproject/review.jpg" %}" alt="Table Setting" width="500" height="550">
+    </div>
+
+    <div class="w3-col m6 w3-padding-large">
+      <h1 class="w3-center">Average Rating: {{rating}} stars </h1><br>
+      <h5 class="w3-center">Following Reviews Were Collected from Yelp and Zomato</h5>
+      {% for restaurant in search_results %}
+            <p class="w3-large">{{restaurant}}</p>
+
+       {% endfor %}
+
+    </div>
+  </div>
+  
+  <hr>
+  
+  <div class="w3-row w3-padding-64" id="menu">
+    <div class="w3-col l6 w3-padding-large">
+      <h1 class="w3-center">Other Information</h1><br>
+      <h4>The official Name of the Establishment</h4>
+      <p class="w3-text-grey"> {{name}}</p><br>
+    
+      <h4>Cusine type of Restaurant According to Zomato</h4>
+      <p class="w3-text-grey">{{cusine}}</p><br>
+    
+      <h4>Menu Url from Zomato</h4>
+      <p class="w3-text-grey"><a href={{menu_url}} >{{menu_url}}</a></p><br>
+    
+      <h4>Average Cost </h4>
+      <p class="w3-text-grey">The average cost of dinning at the restaurant according to zomato is {{average_cost_for_two}} Dollars </p><br>
+    
+      <h4>Phone Number</h4>
+      <p class="w3-text-grey">{{phone_num}}</p> 
+      
+      <h4>Address</h4>
+      <p class="w3-text-grey">{{address}}</p> 
+      
+      <h4>Zipcode</h4>
+      <p class="w3-text-grey">{{zip_code}}</p> 
+      
+    </div>
+    
+    <div class="w3-col l6 w3-padding-large">
+      <img src="http://adrenals.eu/wp-content/uploads/2015/09/basic-info.png" class="w3-round w3-image w3-opacity-min" alt="Menu" style="width:100%">
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="w3-container w3-padding-64" id="contact">
+    <h1><a href={{recipe}}  target="_blank" >Get Recommended Recipes Related to this Restaurant</a></h1><br>
+  </div>
+  
+
+</div>
+
+
+</body>
+</html>
+
