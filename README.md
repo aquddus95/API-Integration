@@ -1,6 +1,6 @@
 # API Integration
 
-Readme for API Integration
+Readme for API Integration (note project was developed using python 2.7 and Django version 1.11)
 
 
 The following application integrates API information that is yielded from making calls to Yelp and Zomato’s API. Initially, scripts for both Yelp and Zomato API were created to load restaurants and the corresponding information returned from the API call (separate tables for Yelp/Zomato API restaurant information) into the database of the web application. Some preconfigured runs of the scripts were made to load some samples into both the Yelp and Zomato API tables. The scripts can be adjusted to yield information for restaurants according to geographical location which can be specified by zip code and city name.
